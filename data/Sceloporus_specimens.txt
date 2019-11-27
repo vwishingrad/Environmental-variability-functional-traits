@@ -1,0 +1,218 @@
+SeriesID	LACM	Genus	Species	Date	Area	Site	Time	Sex	Latitude	Longitude	PosErr	Elevation	SVL_mm	Age10g	Mass_g	VerbatimLocation	Color_Dorsal	Scales_dorsal	BIO12_annualPrecip	BIO5_maxTwarmestMo	BIO6_minTcoldestMo	Aridity_index	BIO10_meanTwarmestQ	BIO11_meanTcoldestQ
+VW186	188334	Sceloporus	occidentalis	"7-July, 2016"	Lone Pine Creek	Alabama Hills	12:10 PM	M	36.60184	-118.07869	2	1182	83	Adult	19.9	On large boulder b/w creek and trail	34.92	NA	186	35.7	-2.9	14.69101479	25.1	5.1
+VW187	188335	Sceloporus	occidentalis	"7-July, 2016"	Lone Pine Creek	Alabama Hills	12:27 PM	F	36.602	-118.07915	2	1185	79	Adult	15.6	On cottonwood tree b/w creek and trail	46.88	NA	186	35.7	-2.9	14.69101479	25.1	5.1
+VW188	188336	Sceloporus	occidentalis	"8-July, 2016"	Lone Pine Creek	Alabama Hills	1:22 PM	M	36.60204	-118.07753	3	1161	87	Adult	22	On rock near trail	30.97	NA	186	35.7	-2.9	14.69101479	25.1	5.1
+VW193	188340	Sceloporus	occidentalis	"10-July, 2016"	Lone Pine Creek	Alabama Hills	4:28 PM	F	36.60187	-118.07854	3	1189	79	Adult	14.4	On rock near trail	44.7	NA	186	35.7	-2.9	14.69101479	25.1	5.1
+VW001	188168	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	3:43 PM	F	34.26327	-116.90086	3	2083	68	Adult	13.3	Adjacent to juniper bushes at ranger station	35.19	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW002	188169	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	4:14 PM	M	34.26365	-116.90079	2	2088	71	Adult	13.3	On steps in front of ranger station	35.51	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW003	188170	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	4:20 PM	M	34.26334	-116.90081	2	2082	75	Adult	14.5	On sidewalk in front of ranger station	32.25	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW004	188171	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	4:29 PM	M	34.26345	-116.90054	2	2085	83	Adult	17.7	On rock across the road from ranger station	35.44	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW005	188172	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	4:56 PM	F	34.26124	-116.9	2	2065	69	Adult	12.8	On curb adjacent to parking lot	35.15	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW006	188173	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	5:03 PM	M	34.26148	-116.90046	2	2065	81	Adult	17.1	On fencepost SE of path	40.05	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW007	188174	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	5:14 PM	F	34.26199	-116.901	2	2066	75	Adult	16.9	On fencepost SW of path	36.99	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW008	188175	Sceloporus	occidentalis	"2-June, 2016"	Big Bear	Big Bear Lake	5:19 PM	M	34.262	-116.90103	2	2068	79	Adult	16.1	On fencepost SW of path	41.21	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW019	188186	Sceloporus	occidentalis	"5-June, 2016"	Big Bear	Big Bear Lake	12:52 PM	F	34.26132	-116.90012	2	2066	71	Adult	13.3	On fencepost	37.36	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW020	188187	Sceloporus	occidentalis	"5-June, 2016"	Big Bear	Big Bear Lake	1:05 PM	M	34.2603	-116.90117	2	2056	78	Adult	14.6	On fencepost	37.15	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW022	188189	Sceloporus	occidentalis	"5-June, 2016"	Big Bear	Big Bear Lake	1:43 PM	M	34.26175	-116.90054	3	2065	76	Adult	15.4	On fencepost	38.68	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW082	188195	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	5:37 PM	F	34.2616	-116.90013	3	2075	67	Adult	12.5	On wooden fencepost	32.98	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW083	188196	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	5:43 PM	M	34.26163	-116.90017	2	2073	69	Adult	12.3	On wooden fencepost	35.54	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW085	188198	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	5:59 PM	M	34.26176	-116.90051	2	2070	71	Adult	13	On wooden fencepost	45.09	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW086	188199	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	6:10 PM	F	34.26167	-116.90044	2	2054	79	Adult	16	On tree near path	33.92	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW136	188292	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Big Pine Creek	2:37 PM	M	37.15558	-118.29389	3	1235	92	Adult	31.4	"On rock wall in Big Pine, CA."	39.32	NA	175	35.6	-4.6	14.04268978	23.8	4.2
+VW137	188293	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Big Pine Creek	2:51 PM	F	37.15516	-118.29459	3	1243	83	Adult	22.5	On tree next to creek	47.9	NA	175	35.6	-4.6	14.04268978	23.8	4.2
+VW031	188212	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	9:45 AM	F	34.42067	-117.83897	2	1223	74	Adult	16.9	On rock wall	45.24	39	540	31.3	-1.2	55.20061334	21.7	5.5
+VW032	188213	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	9:54 AM	M	34.42006	-117.8389	3	1230	72	Adult	13.5	On rock near road	39.2	44	540	31.3	-1.2	55.20061334	21.7	5.5
+VW034	188215	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	10:46 AM	M	34.42173	-117.83996	2	1210	77	Adult	17.4	On stone NW of wash	39.72	40	540	31.3	-1.2	55.20061334	21.7	5.5
+VW037	188218	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	1:38 PM	M	34.42104	-117.839	2	1232	66	Adult	11.4	On rock near stream/road	40.49	37	540	31.3	-1.2	55.20061334	21.7	5.5
+VW044	188225	Sceloporus	occidentalis	"11-June, 2016"	Table Mountain	Big Rock Creek	4:02 PM	M	34.42102	-117.83899	3	1239	64	Adult	10.1	On large rock near stream	36.41	39	540	31.3	-1.2	55.20061334	21.7	5.5
+VW045	188226	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	12:12 PM	M	34.42155	-117.83936	2	1229	78	Adult	18.7	On large rocks	33.37	38	540	31.3	-1.2	55.20061334	21.7	5.5
+VW046	188227	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	12:38 PM	F	34.42091	-117.84097	3	1242	66	Adult	11	On rocks at edge of wash	40.91	42	540	31.3	-1.2	55.20061334	21.7	5.5
+VW047	188228	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	12:58 PM	F	34.41999	-117.84187	3	1245	77	Adult	15.9	On large rock in center of wash	43.18	39	540	31.3	-1.1	55.18763797	21.7	5.5
+VW048	188229	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	1:53 PM	M	34.41919	-117.84389	2	1258	70	Adult	11.9	On rock wall along wash	39.26	40	540	31.3	-1.1	55.18763797	21.7	5.5
+VW049	188230	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	2:03 PM	M	34.41943	-117.84315	3	1252	78	Adult	17.4	On canyon wall	39.08	40	540	31.3	-1.1	55.18763797	21.7	5.5
+VW050	188231	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	2:09 PM	M	34.41919	-117.84254	2	1248	66	Adult	11	On rock at edge of wash	39.93	39	540	31.3	-1.1	55.18763797	21.7	5.5
+VW051	188232	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	2:36 PM	F	34.4178	-117.8426	3	1245	76	Adult	16.6	On small rock at edge of wash	48.14	42	540	31.3	-1.1	55.18763797	21.7	5.5
+VW052	188233	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	2:46 PM	F	34.41838	-117.84185	2	1253	74	Adult	15.5	On small rock near edge of wash	46.34	39	540	31.3	-1.1	55.18763797	21.7	5.5
+VW055	188236	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	3:43 PM	F	34.41991	-117.83901	2	1241	73	Adult	14.7	On rock wall near stream	44.31	39	540	31.3	-1.2	55.20061334	21.7	5.5
+VW056	188237	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	4:01 PM	F	34.41967	-117.83905	2	1247	87	Adult	22.7	On tree near cliff	44.06	40	540	31.3	-1.2	55.20061334	21.7	5.5
+VW103	188264	Sceloporus	occidentalis	"26-June, 2016"	Bishop Creek	Big Trees	3:22 PM	M	37.26441	-118.57789	3	2286	86	Adult	22	On large root near stream	38.05	42	365	23.7	-7.5	72.21430833	14.3	-1
+VW104	188265	Sceloporus	occidentalis	"26-June, 2016"	Bishop Creek	Big Trees	3:36 PM	M	37.26497	-118.57779	3	2273	87	Adult	26.9	On rock near trail/creek	35.76	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW130	188287	Sceloporus	occidentalis	"30-June, 2016"	Bishop Creek	Big Trees	11:29 AM	M	37.26435	-118.57821	3	2273	79	Adult	17.3	On rock near creek	44.14	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW134	188290	Sceloporus	occidentalis	"30-June, 2016"	Bishop Creek	Big Trees	11:58 AM	M	37.26482	-118.5778	3	2265	77	Adult	18.3	On rock near Bishop Cr.	40.87	41	365	23.7	-7.5	72.21430833	14.3	-1
+VW143	188299	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	9:56 AM	F	37.26487	-118.57777	3	2265	85	Adult	22	On log adjacent to Bishop Cr.	33.74	43	365	23.7	-7.5	72.21430833	14.3	-1
+VW147	188300	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	12:47 PM	F	37.26183	-118.57942	2	2278	81	Adult	22	On rock near creek	38.53	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW148	188301	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	12:59 PM	M	37.26431	-118.57811	2	2289	80	Adult	19.7	On rock  near creek	40.74	45	365	23.7	-7.5	72.21430833	14.3	-1
+VW149	188302	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	1:30 PM	F	37.26536	-118.57748	4	2269	80	Adult	17	On rock near Bishop Cr.	42.88	45	365	23.7	-7.5	72.21430833	14.3	-1
+VW152	188304	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	10:05 AM	F	37.26441	-118.57774	2	2285	85	Adult	24.5	At Big Trees campground near Bishop Cr.	41.52	45	365	23.7	-7.5	72.21430833	14.3	-1
+VW153	188305	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	12:27 PM	F	37.26319	-118.57932	2	2301	78	Adult	16.3	At Big Trees campground on rock b/w camp and Hwy 168.	48.11	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW154	188306	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	12:50 PM	F	37.26412	-118.57824	3	2281	82	Adult	20.4	Between Big Trees campground and Bishop Cr.	42.47	42	365	23.7	-7.5	72.21430833	14.3	-1
+VW166	188315	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Big Trees	1:30 PM	F	37.26773	-118.57759	2	2241	90	Adult	32.1	On rock next to Big Trees Rd.	NA	43	362	23.7	-7.5	71.62076607	14.3	-1
+VW167	188316	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Big Trees	11:41 AM	F	37.26544	-118.57755	2	2271	74	Adult	15	On rock next to tree	44.96	45	365	23.7	-7.5	72.21430833	14.3	-1
+VW168	188317	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Big Trees	12:09 PM	M	37.26326	-118.57825	2	2291	91	Adult	26.5	On rock near Bishop Cr.	40.01	43	365	23.7	-7.5	72.21430833	14.3	-1
+VW169	188318	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Big Trees	12:21 PM	M	37.26391	-118.57851	2	2283	83	Adult	23.6	On rock b/w creek and trail	41.6	46	365	23.7	-7.5	72.21430833	14.3	-1
+VW172	188321	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Big Trees	11:45 AM	F	37.2654	-118.57747	4	2267	89	Adult	27.8	On rock near Bishop Cr.	39.97	47	365	23.7	-7.5	72.21430833	14.3	-1
+VW101	188263	Sceloporus	occidentalis	"26-June, 2016"	Bishop Creek	Bishop Creek	11:32 AM	M	37.36787	-118.38847	3	1263	74	Adult	15.8	On fencepost above S. fork Bishop Cr.	26.65	43	161	35.5	-5.4	13.07784159	23.1	3.9
+VW106	188267	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	8:51 AM	M	37.36783	-118.38863	3	1259	77	Adult	17.6	On wooden barrier near Bishop Cr.	36.3	39	161	35.5	-5.4	13.07784159	23.1	3.9
+VW107	188268	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	11:11 AM	M	37.36938	-118.39087	3	1260	77	Adult	17.5	On log adjacent to dog park lot	37.75	43	161	35.5	-5.4	13.07784159	23.1	3.9
+VW112	188271	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	2:08 PM	F	37.36107	-118.44223	2	1320	88	Adult	20.3	On tree at Izaak Walton Park	36.6	42	194	34.7	-5.3	16.49659864	22.5	3.6
+VW113	188272	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	2:31 PM	M	37.36096	-118.44214	4	1326	91	Adult	25.2	On tree at Izaak Walton Park	33.99	41	194	34.7	-5.3	16.49659864	22.5	3.6
+VW114	188273	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	2:48 PM	F	37.36098	-118.4428	3	1313	93	Adult	26	On cut stump near stream/fence	34.45	42	194	34.7	-5.3	16.49659864	22.5	3.6
+VW115	188274	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	3:13 PM	M	37.36145	-118.44006	2	1320	89	Adult	25.5	On small rock near road	35.15	44	188	34.8	-5.4	15.90686026	22.6	3.6
+VW116	188275	Sceloporus	occidentalis	"27-June, 2016"	Bishop Creek	Bishop Creek	3:32 PM	F	37.36158	-118.44009	2	1325	77	Adult	16.3	On small rock near road	41.5	45	188	34.8	-5.4	15.90686026	22.6	3.6
+VW117	188276	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Bishop Creek	12:27 PM	M	37.36094	-118.44214	3	1322	81	Adult	21.2	On tree at Izaak Walton Park	39.55	42	194	34.7	-5.3	16.49659864	22.5	3.6
+VW118	188277	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Bishop Creek	12:28 PM	F	37.36095	-118.44214	3	1321	65	Adult	10.3	On tree at Izaak Walton Park	29.59	44	194	34.7	-5.3	16.49659864	22.5	3.6
+VW119	188278	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Bishop Creek	12:38 PM	F	37.36075	-118.44246	4	1323	83	Adult	17.2	On tree next to creek	41.38	43	194	34.7	-5.3	16.49659864	22.5	3.6
+VW126	188283	Sceloporus	occidentalis	"29-June, 2016"	Bishop Creek	Bishop Creek	12:49 PM	M	37.35778	-118.45149	3	1343	79	Adult	17.7	On tree near creek	37.81	42	201	34.4	-5.4	17.4146595	22.3	3.5
+VW127	188284	Sceloporus	occidentalis	"29-June, 2016"	Bishop Creek	Bishop Creek	1:45 PM	F	37.35918	-118.4504	2	1341	75	Adult	15.7	On tree next to channel	37.33	44	198	34.5	-5.3	17.037241	22.3	3.6
+VW128	188285	Sceloporus	occidentalis	"29-June, 2016"	Bishop Creek	Bishop Creek	2:28 PM	M	37.36149	-118.44029	2	1324	78	Adult	17	On rock near creek	36.58	44	188	34.8	-5.4	15.90686026	22.6	3.6
+VW156	188308	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	10:35 AM	F	37.35738	-118.45272	2	1353	77	Adult	15.3	On partially burned tree near trail	NA	40	201	34.4	-5.4	17.4146595	22.3	3.5
+VW159	188310	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	11:55 AM	F	37.35467	-118.45815	2	1359	78	Adult	16	On tree next to trail	NA	46	201	34.4	-5.4	17.4146595	22.3	3.5
+VW160	188311	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	12:17 PM	M	37.3549	-118.45575	2	1357	88	Adult	25.3	On tree near Bishop Cr.	NA	48	201	34.4	-5.4	17.4146595	22.3	3.5
+VW161	188312	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	10:30 AM	F	37.35735	-118.45269	3	1347	78	Adult	16.8	On partially burned tree near trail	NA	43	201	34.4	-5.4	17.4146595	22.3	3.5
+VW163	188313	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	11:35 AM	M	37.35458	-118.45771	3	1356	82	Adult	18.5	On cement wall next to weir	NA	43	201	34.4	-5.4	17.4146595	22.3	3.5
+VW165	188314	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	12:20 PM	M	37.3549	-118.45575	2	1357	82	Adult	20.1	On tree next to Bishop Cr.	NA	44	201	34.4	-5.4	17.4146595	22.3	3.5
+VW219	188361	Sceloporus	occidentalis	"25-July, 2016"	Donner Pass	Donner Summit	1:59 PM	F	39.34373	-120.3381	2	2219	79	Adult	15.1	On rock in boulder field	32.76	40	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW220	188362	Sceloporus	occidentalis	"25-July, 2016"	Donner Pass	Donner Summit	2:23 PM	F	39.34372	-120.33963	2	2216	76	Adult	16.2	On rock in Donner Pass	32.14	43	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW221	188363	Sceloporus	occidentalis	"25-July, 2016"	Donner Pass	Donner Summit	2:40 PM	M	39.34406	-120.33944	2	2224	73	Adult	15.1	On rock pile	27.29	39	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW222	188364	Sceloporus	occidentalis	"25-July, 2016"	Donner Pass	Donner Summit	3:10 PM	F	39.3453	-120.33869	3	2227	71	Adult	15.2	On ground under manzanita	28.29	39	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW234	188375	Sceloporus	occidentalis	"27-July, 2016"	Donner Pass	Donner Summit	4:48 PM	F	39.34492	-120.33887	2	2220	73	Adult	15.7	On fallen tree near trail	29.37	38	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW236	188377	Sceloporus	occidentalis	"27-July, 2016"	Donner Pass	Donner Summit	5:09 PM	M	39.34453	-120.33906	3	2225	71	Adult	13.5	On rock near trail	18.98	42	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW244	188384	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Donner Summit	3:48 PM	F	39.34468	-120.33737	3	2218	77	Adult	16.3	On log near PCT trail	28.99	41	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW245	188385	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Donner Summit	4:33 PM	M	39.34407	-120.34015	3	2218	70	Adult	12.7	On tree near trail	32.32	40	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW228	188369	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	3:32 PM	M	39.32102	-120.65611	3	1367	71	Adult	13.4	On rocks on ground	28.34	37	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW239	188379	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Emerald Pools	11:16 AM	M	39.32083	-120.65613	2	1381	72	Adult	14.5	On rock b/w camp and creek	36.06	41	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW240	188380	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Emerald Pools	11:25 AM	F	39.32063	-120.65604	2	1375	72	Adult	14.5	On rock near creek trail	30.87	43	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW241	188381	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Emerald Pools	11:46 AM	M	39.32113	-120.65607	3	1375	72	Adult	15.2	On ground next to trail	27.33	42	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW024	188205	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:01 PM	M	34.37189	-117.7116	2	2248	76	Adult	16.3	On fencepost at Inspiration Point	34.88	40	732	25	-4.8	121.6027643	16	1.6
+VW025	188206	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:01 PM	F	34.37187	-117.71163	2	2248	72	Adult	11.5	At Inspiration Point on fecepost/tree	37.23	39	732	25	-4.8	121.6027643	16	1.6
+VW028	188209	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:01 PM	F	34.37185	-117.71162	2	2252	66	Adult	12.9	At Inspiration Point on ground	39.68	39	732	25	-4.8	121.6027643	16	1.6
+VW029	188210	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:26 PM	M	34.37182	-117.37182	2	2252	73	Adult	14.1	At Inspiration Point on fecepost	31.82	40	482	33.4	-0.8	43.23180138	23	6.5
+VW038	188219	Sceloporus	occidentalis	"10-June, 2016"	Table Mountain	Inspiration Point	3:23 PM	F	34.37192	-117.71175	3	2250	73	Adult	16	On ground at Inspiration Point	41.87	41	732	25	-4.8	121.6027643	16	1.6
+VW039	188220	Sceloporus	occidentalis	"10-June, 2016"	Table Mountain	Inspiration Point	3:25 PM	M	34.37192	-117.71174	2	2247	68	Adult	11.8	On fencepost at Inspiration Point	37.28	39	732	25	-4.8	121.6027643	16	1.6
+VW042	188223	Sceloporus	occidentalis	"11-June, 2016"	Table Mountain	Inspiration Point	12:05 PM	F	34.37225	-117.7105	3	2251	71	Adult	13.9	On concrete platform (vault toilet)	40.49	40	732	25	-4.8	121.6027643	16	1.6
+VW058	188239	Sceloporus	occidentalis	"14-June, 2016"	Table Mountain	Inspiration Point	1:14 PM	F	34.3724	-117.71067	2	2237	76	Adult	16.8	On fencepost	38.18	39	732	25	-4.8	121.6027643	16	1.6
+VW059	188240	Sceloporus	occidentalis	"14-June, 2016"	Table Mountain	Inspiration Point	2:01 PM	M	34.3689	-117.70111	2	2299	76	Adult	14.4	On cut log	45.73	41	746	24.4	-5.1	131.0266093	15.6	1.2
+VW060	188241	Sceloporus	occidentalis	"14-June, 2016"	Table Mountain	Inspiration Point	2:49 PM	M	34.37063	-117.70252	2	2251	74	Adult	14.4	On cut down tree	36.53	37	746	24.4	-5.1	131.0266093	15.6	1.2
+VW061	188242	Sceloporus	occidentalis	"14-June, 2016"	Table Mountain	Inspiration Point	3:08 PM	F	34.3724	-117.70984	3	2250	72	Adult	11.6	On tree on PCT next to sign	35.86	38	732	25	-4.8	121.6027643	16	1.6
+VW069	188250	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Inspiration Point	12:00 PM	M	34.37185	-117.71173	2	2252	75	Adult	16.9	On concrete pillar	39.83	36	732	25	-4.8	121.6027643	16	1.6
+VW071	188252	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Inspiration Point	12:15 PM	M	34.37237	-117.71084	2	2249	74	Adult	14.7	On fencepost	34	36	732	25	-4.8	121.6027643	16	1.6
+VW200	188343	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	5:33 PM	F	41.2778	-122.33302	2	986	73	Adult	13.2	On rock near trail	34.14	40	1032	30	-4.1	116.8491491	18.1	2.3
+VW201	188344	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	5:52 PM	F	41.27993	-122.32947	2	973	69	Adult	10.5	On ground near beach	33.51	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW203	188346	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	6:03 PM	M	41.27987	-122.32942	2	973	68	Adult	12.2	On rocks near beach	24.26	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW204	188347	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	6:39 PM	F	41.28002	-122.32939	2	977	69	Adult	12.4	On rocks near beach	32.46	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW207	188349	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	5:45 PM	M	41.28041	-122.32924	2	980	68	Adult	12.9	On rock near trail	35.45	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW208	188350	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	5:54 PM	F	41.28028	-122.32925	3	983	70	Adult	13.5	On rock near trail	28.43	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW209	188351	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	6:01 PM	F	41.28008	-122.32962	2	979	67	Adult	10.8	On rock near lake	37.64	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW210	188352	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	6:09 PM	M	41.28021	-122.32966	2	984	72	Adult	14.7	On rock at lake shore	35.59	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW214	188356	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	7:23 PM	F	41.27881	-122.33333	3	978	70	Adult	13.7	On rock near lake shore	37.39	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW216	188358	Sceloporus	occidentalis	"22-July, 2016"	Mt Shasta	Lake Siskiyou	12:07 PM	M	41.27781	-122.33264	3	994	65	Adult	11.4	On rock near path/lot	36.04	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW217	188359	Sceloporus	occidentalis	"22-July, 2016"	Mt Shasta	Lake Siskiyou	12:22 PM	M	41.27861	-122.33431	3	976	68	Adult	13.2	On tree at Lake Siskiyou	31.85	NA	1032	30.4	-3.9	113.5375983	18.5	2.5
+VW218	188360	Sceloporus	occidentalis	"22-July, 2016"	Mt Shasta	Lake Siskiyou	12:27 PM	M	41.27856	-122.33443	2	977	72	Adult	14.5	On wood at Lake Siskiyou	27.76	NA	1032	30.4	-3.9	113.5375983	18.5	2.5
+VW023	188204	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Largo Vista	12:30 PM	F	34.46893	-117.76936	2	1181	70	Adult	11.8	On Y. brevifolia	33.27	NA	426	32.9	-0.9	39.38609467	22.9	6.1
+VW030	188211	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Largo Vista	5:57 PM	F	34.45517	-117.76493	2	1261	76	Adult	15.3	On fencepost	36.42	NA	498	31.9	-1.2	49.00754795	22.1	5.6
+VW105	188266	Sceloporus	occidentalis	"26-June, 2016"	McGee Creek	McGee Creek	5:04 PM	M	37.33615	-118.52837	2	1707	69	Adult	12.3	On log next to firepit	33.87	NA	297	30.1	-6.3	34.28294395	19.2	1.6
+VW129	188286	Sceloporus	occidentalis	"29-June, 2016"	McGee Creek	McGee Creek	4:06 PM	F	37.33616	-118.52848	NA	1701	91	Adult	22.9	On tree near McGee Cr.	43.29	NA	297	30.1	-6.3	34.28294395	19.2	1.6
+VW138	188294	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Sage Flat	3:59 PM	M	37.126	-118.43502	2	2365	91	Adult	26.7	On rock near Big Pine Cr.	35.58	NA	373	22.4	-8	85.20650585	13.3	-1.8
+VW140	188296	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Sage Flat	4:30 PM	F	37.13055	-118.41382	2	2259	92	Adult	25.9	On rock near Glacier Lodge Rd.	37.6	NA	349	24.8	-7.3	62.12728082	15.4	-0.7
+VW110	188269	Sceloporus	occidentalis	"27-June, 2016"	"Wilderson, CA"	Sierra Grande St.	1:05 PM	F	37.28704	-118.38786	2	1351	87	Adult	21.9	On concrete wall at 186 Sierra Grande St.	41.97	NA	186	34.6	-5.5	15.93953261	22.6	3.5
+VW111	188270	Sceloporus	occidentalis	"27-June, 2016"	"Wilderson, CA"	Sierra Grande St.	1:12 PM	F	37.28702	-118.38784	3	1349	90	Adult	29.3	On tree at 186 Sierra Grande St.	39.86	NA	186	34.6	-5.5	15.93953261	22.6	3.5
+VW009	188176	Sceloporus	occidentalis	"3-June, 2016"	Big Bear	Thurman Flats	1:25 PM	M	34.10347	-117.01331	3	1033	81	Adult	19	On rock at base of tree	38.57	NA	548	33.8	0.4	47.97422698	23	7.5
+VW011	188178	Sceloporus	occidentalis	"3-June, 2016"	Big Bear	Thurman Flats	2:28 PM	F	34.10244	-117.0149	2	1031	78	Adult	16.7	On log under trees	42.34	NA	548	33.8	0.4	47.97422698	23	7.5
+VW012	188179	Sceloporus	occidentalis	"3-June, 2016"	Big Bear	Thurman Flats	2:43 PM	M	34.10247	-117.01348	2	1028	70	Adult	13.9	On broken tree	42.34	NA	548	33.8	0.4	47.97422698	23	7.5
+VW013	188180	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	11:47 AM	M	34.10091	-117.00968	2	1049	77	Adult	17.3	On large boulder next to stream	41.73	NA	548	33.8	0.4	47.97422698	23	7.5
+VW014	188181	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	12:41 PM	M	34.10344	-117.01329	2	1038	67	Adult	12	On tree trunk ~2 m high	41.3	NA	548	33.8	0.4	47.97422698	23	7.5
+VW016	188183	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	1:07 PM	M	34.1027	-117.01337	3	1035	72	Adult	16.3	On boulder next to stream	39.37	NA	548	33.8	0.4	47.97422698	23	7.5
+VW017	188184	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	1:25 PM	M	34.10247	-117.01484	2	1029	74	Adult	17.9	On fallen tree under canopy	38.74	NA	548	33.8	0.4	47.97422698	23	7.5
+VW077	188190	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Thurman Flats	11:57 AM	M	34.1024	-117.01514	2	1031	79	Adult	19.2	On tree near stream	41.21	NA	548	33.8	0.4	47.97422698	23	7.5
+VW078	188191	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Thurman Flats	12:23 PM	F	34.10238	-117.01407	2	1024	67	Adult	11.9	On rock near stream	34.78	NA	548	33.8	0.4	47.97422698	23	7.5
+VW079	188192	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Thurman Flats	12:30 PM	F	34.10246	-117.01389	2	1032	74	Adult	15.9	On rock near stream	39.72	NA	548	33.8	0.4	47.97422698	23	7.5
+VW088	188201	Sceloporus	occidentalis	"21-June, 2016"	Big Bear	Thurman Flats	1:30 PM	M	34.10192	-117.01148	2	1042	78	Adult	17.9	On large rock near stream	38.84	NA	548	33.8	0.4	47.97422698	23	7.5
+VW089	188202	Sceloporus	occidentalis	"21-June, 2016"	Big Bear	Thurman Flats	1:36 PM	F	34.10186	-117.01142	3	1048	70	Adult	12.6	On large rock near stream	41.89	NA	548	33.8	0.4	47.97422698	23	7.5
+VW090	188203	Sceloporus	occidentalis	"21-June, 2016"	Big Bear	Thurman Flats	1:45 PM	F	34.10194	-117.01118	NA	1041	64	Adult	10.6	On rock near stream	40.99	NA	548	33.8	0.4	47.97422698	23	7.5
+VW097	188259	Sceloporus	occidentalis	"25-June, 2016"	Bishop Creek	Transect: BC - BT	5:06 PM	F	37.32334	-118.50055	2	1589	83	Adult	22.9	On rock wall	35.47	42	280	30.7	-6.2	30.97173829	19.7	1.8
+VW098	188260	Sceloporus	occidentalis	"25-June, 2016"	Bishop Creek	Transect: BC - BT	5:06 PM	F	37.32336	-118.50056	2	1588	82	Adult	18.8	On rock wall	41.81	42	280	30.7	-6.2	30.97173829	19.7	1.8
+VW099	188261	Sceloporus	occidentalis	"25-June, 2016"	Bishop Creek	Transect: BC - BT	5:06 PM	M	37.32334	-118.50057	2	1588	83	Adult	20.3	On rock wall	36.72	41	280	30.7	-6.2	30.97173829	19.7	1.8
+VW123	188281	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Transect: BC - BT	3:40 PM	M	37.32334	-118.50056	3	1586	73	Adult	20.8	On tree near lawn	35.75	41	280	30.7	-6.2	30.97173829	19.7	1.8
+VW124	188282	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Transect: BC - BT	3:45 PM	M	37.32341	-118.50055	3	1586	85	Adult	23.4	On sand near road	36.75	41	280	30.7	-6.2	30.97173829	19.7	1.8
+VW170	188319	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Transect: BC - BT	12:56 PM	F	37.2788	-118.56735	2	2130	79	Adult	14.2	On rock near Bishop Cr.	37.42	42	365	24.9	-7.3	64.40570299	15.3	-0.5
+VW171	188320	Sceloporus	occidentalis	"4-July , 2016"	Bishop Creek	Transect: BC - BT	1:10 PM	M	37.27872	-118.56762	2	2131	65	Adult	10.5	On rock near trail	35.47	45	365	24.9	-7.3	64.40570299	15.3	-0.5
+VW173	188322	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	1:20 PM	M	37.34371	-118.47147	2	1417	75	Adult	15.7	On wooden fence	42.12	44	221	33.7	-5.5	19.99203937	21.8	3.1
+VW174	188323	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	2:43 PM	M	37.27245	-118.57378	2	2195	79	Adult	17.5	On rock next to Bishop Cr.	39.2	46	367	25.1	-7.1	63.31953071	15.4	-0.4
+VW177	188326	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	3:59 PM	F	37.28543	-118.55855	2	2078	85	Adult	21.3	On boulder b/w creek and trail.	41.67	44	360	25.7	-7.1	59.0086546	15.9	-0.1
+VW178	188327	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	4:20 PM	M	37.28594	-118.55777	3	2074	89	Adult	24.2	On rock near trail and creek	39.13	44	355	25.8	-7.1	57.70199763	16	-0.1
+VW179	188328	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	5:21 PM	F	37.30269	-118.53078	3	1938	72	Adult	12.4	On tree in roundabout	43.31	44	330	27.8	-6.7	45.33278385	17.5	0.6
+VW181	188329	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	2:51 PM	F	37.27214	-118.57397	4	2184	89	Adult	29.2	On rock near Bishop Cr.	39.12	40	367	25.1	-7.1	63.31953071	15.4	-0.4
+VW182	188330	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	4:07 PM	M	37.28547	-118.55851	4	2082	73	Adult	14.7	On rock near Bishop Cr. and campground	31.05	42	360	25.7	-7.1	59.0086546	15.9	-0.1
+VW183	188331	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	4:20 PM	F	37.28594	-118.55776	3	2072	83	Adult	17.5	On rock near Bishop Cr. and campground	43.79	45	355	25.8	-7.1	57.70199763	16	-0.1
+VW184	188332	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	5:20 PM	F	37.3027	-118.53078	2	1939	84	Adult	21.2	On tree on road past power plant	44.82	44	330	27.8	-6.7	45.33278385	17.5	0.6
+VW185	188333	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	5:25 PM	M	37.30268	-118.53078	2	1939	78	Adult	18.6	On tree on road past power plant	41.59	41	330	27.8	-6.7	45.33278385	17.5	0.6
+VW141	188297	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Transect: BPC - SF	5:31 PM	F	37.13254	-118.33538	2	1549	81	Adult	18.6	On rock near Big Pine Cr.	48.78	NA	244	31.6	-5.9	25.31776913	20.7	2.2
+VW142	188298	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Transect: BPC - SF	5:34 PM	M	37.13255	-118.33539	2	1548	70	Adult	12.5	On rock near Big Pine Cr.	40.36	NA	244	31.6	-5.9	25.31776913	20.7	2.2
+VW043	188224	Sceloporus	occidentalis	"11-June, 2016"	Table Mountain	Transect: BRC - IP	1:32 PM	M	34.37312	-117.75149	3	2017	68	Adult	12.2	On fencepost	38.67	37	743	24.7	-4.8	126.5650285	15.9	1.5
+VW062	188243	Sceloporus	occidentalis	"15-June, 2016"	Table Mountain	Transect: BRC - IP	3:37 PM	M	34.41267	-117.82676	2	1300	81	Adult	21	On log next to rock wash	35.22	43	569	31	-1.3	59.31346489	21.4	5.3
+VW064	188245	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	2:51 PM	M	34.39666	-117.80315	3	1472	77	Adult	17.7	On archery target logs	35.4	39	666	30	-1.9	74.2980176	20.6	4.7
+VW065	188246	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	4:12 PM	M	34.38434	-117.77237	3	1706	77	Adult	14.9	On rock b/w wash and road	38.55	36	771	27.8	-3.2	101.1014949	18.6	3.3
+VW066	188247	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	4:59 PM	M	34.3847	-117.77236	3	1710	81	Adult	19.1	On rock near road	43.05	40	771	27.8	-3.2	101.1014949	18.6	3.3
+VW067	188248	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	5:09 PM	M	34.38473	-117.77263	2	1704	84	Adult	22.4	On rock near road	32.4	41	771	27.8	-3.2	101.1014949	18.6	3.3
+VW072	188253	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Transect: BRC - IP	1:35 PM	M	34.37823	-117.74346	3	2083	76	Adult	16.9	On rock by road (Highway 3)	47.32	40	740	24.9	-4.7	123.7623762	16	1.5
+VW073	188254	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Transect: BRC - IP	1:51 PM	M	34.37307	-117.75256	2	2014	77	Adult	16.6	On fencepost ascending trail	37.98	40	743	24.7	-4.8	126.5650285	15.9	1.5
+VW074	188255	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Transect: BRC - IP	2:13 PM	F	34.37293	-117.75214	2	2012	67	Adult	12.7	On fencepost	40.11	39	743	24.7	-4.8	126.5650285	15.9	1.5
+VW075	188256	Sceloporus	occidentalis	"18-June, 2016"	Table Mountain	Transect: BRC - IP	12:26 PM	F	34.37359	-117.75259	2	2007	74	Adult	16.2	On fencepost	34.44	39	743	24.7	-4.8	126.5650285	15.9	1.5
+VW243	188383	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Transect: EP - DS	12:28 PM	M	39.30904	-120.65609	5	1532	66	Adult	12.6	On rock near Hwy 20	31.15	44	1760	27.1	-3	242.6214141	17.5	2.6
+VW246	188386	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Transect: EP - DS	5:29 PM	M	39.32579	-120.38935	3	2047	74	Adult	18.1	On brick pile	22.5	38	1160	24.5	-8.2	217.6319394	13.9	-1.7
+VW247	188387	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Transect: EP - DS	6:21 PM	F	39.31797	-120.43603	2	1867	73	Adult	16.2	On rock off Donner Summit Rd	25.23	40	1266	25.7	-7.7	210.5788423	14.9	-0.9
+VW190	188338	Sceloporus	occidentalis	"10-July, 2016"	Lone Pine Creek	Whitney Portal	11:19 AM	M	36.58761	-118.23302	2	2456	88	Adult	29.6	On felled tree	34.51	NA	470	23.4	-6.6	93.25396825	14.4	-0.8
+VW192	188339	Sceloporus	occidentalis	"10-July, 2016"	Lone Pine Creek	Whitney Portal	2:55 PM	M	36.58913	-118.23115	3	2429	79	Adult	18.9	On rock near road	40.92	NA	470	23.4	-6.6	93.25396825	14.4	-0.8
+VW189	188337	Sceloporus	occidentalis	"8-July, 2016"	Lone Pine Creek	Alabama Hills	1:30 PM	F	36.60202	-118.07742	3	1163	63	Juvenile	9.3	On rock near trail	35.77	NA	186	35.7	-2.9	14.69101479	25.1	5.1
+VW021	188188	Sceloporus	occidentalis	"5-June, 2016"	Big Bear	Big Bear Lake	1:26 PM	M	34.2602	-116.90315	2	2057	64	Juvenile	9.5	On fencepost	35.74	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW081	188194	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	5:31 PM	M	34.26141	-116.90012	2	2073	56	Juvenile	7	On wooden fencepost	26.41	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW084	188197	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Big Bear Lake	5:51 PM	F	34.26143	-116.90043	2	2075	68	Juvenile	9.4	On wooden fencepost	36.8	NA	625	26.7	-6.5	93.19456042	16.5	1.2
+VW033	188214	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	10:25 AM	F	34.42136	-117.8391	3	1215	59	Juvenile	7.6	On large rock next to stream	42.01	39	540	31.3	-1.2	55.20061334	21.7	5.5
+VW035	188216	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	11:02 AM	M	34.42073	-117.84133	2	1216	63	Juvenile	9.7	On large rock NW of wash	39.88	43	540	31.3	-1.2	55.20061334	21.7	5.5
+VW036	188217	Sceloporus	occidentalis	"9-June, 2016"	Table Mountain	Big Rock Creek	11:15 AM	M	34.41993	-117.84206	2	1197	64	Juvenile	9.4	On rock E of wash	36.92	39	540	31.3	-1.1	55.18763797	21.7	5.5
+VW053	188234	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	3:11 PM	M	34.42097	-117.84108	2	1236	65	Juvenile	9.1	On rock under tree beside wash	41.54	43	540	31.3	-1.2	55.20061334	21.7	5.5
+VW054	188235	Sceloporus	occidentalis	"12-June, 2016"	Table Mountain	Big Rock Creek	3:42 PM	M	34.41993	-117.83898	3	1247	66	Juvenile	9.5	On rock wall near stream	39.5	40	540	31.3	-1.2	55.20061334	21.7	5.5
+VW131	188288	Sceloporus	occidentalis	"30-June, 2016"	Bishop Creek	Big Trees	11:34 AM	M	37.2644	-118.5779	2	2273	60	Juvenile	7.6	On rock near creek	31.84	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW133	188289	Sceloporus	occidentalis	"30-June, 2016"	Bishop Creek	Big Trees	11:51 AM	M	37.26471	-118.57774	2	2269	56	Juvenile	7.1	On rock near Bishop Cr.	29.95	43	365	23.7	-7.5	72.21430833	14.3	-1
+VW150	188303	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	1:36 PM	F	37.2654	-118.57752	3	2263	59	Juvenile	7.3	On rock near Bishop Cr.	35.34	40	365	23.7	-7.5	72.21430833	14.3	-1
+VW155	188307	Sceloporus	occidentalis	"2-July, 2016"	Bishop Creek	Big Trees	1:00 PM	F	37.26412	-118.57824	3	2281	61	Juvenile	7.7	Between Big Trees campground and Bishop Cr.	29.46	44	365	23.7	-7.5	72.21430833	14.3	-1
+VW158	188309	Sceloporus	occidentalis	"3-July, 2016"	Bishop Creek	Bishop Creek	11:28 AM	M	37.35452	-118.45808	2	1363	59	Juvenile	7.3	On rock next to Bishop Cr.	NA	45	201	34.4	-5.4	17.4146595	22.3	3.5
+VW120	188279	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Bishop Creek?	1:18 PM	M	37.36023	-118.44347	3	1323	62	Juvenile	8	On tree near stream. Rare coloration.	43.1	NA	194	34.7	-5.3	16.49659864	22.5	3.6
+VW223	188365	Sceloporus	occidentalis	"25-July, 2016"	Donner Pass	Donner Summit	3:17 PM	M	39.34562	-120.33936	2	2233	58	Juvenile	7.6	On rock near trail	30.96	39	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW232	188373	Sceloporus	occidentalis	"27-July, 2016"	Donner Pass	Donner Summit	11:06 AM	M	39.3389	-120.33928	2	2210	54	Juvenile	5.7	On rock near trail	31.54	39	1089	23.6	-8.5	224.6704215	13.3	-2.2
+VW233	188374	Sceloporus	occidentalis	"27-July, 2016"	Donner Pass	Donner Summit	1:24 PM	M	39.34286	-120.3363	3	2193	57	Juvenile	7	On ground adjacent to trail	38.6	40	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW235	188376	Sceloporus	occidentalis	"27-July, 2016"	Donner Pass	Donner Summit	5:01 PM	F	39.34484	-120.33891	3	2220	60	Juvenile	7	On rock near trail	31.17	41	1084	23.4	-8.5	228.0616861	13.2	-2.2
+VW225	188366	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	2:25 PM	M	39.32021	-120.65799	2	1388	63	Juvenile	8.7	On rock near camp	33.68	40	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW226	188367	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	2:49 PM	F	39.32104	-120.65587	3	1372	61	Juvenile	7.5	On log pile	31.12	41	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW227	188368	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	3:05 PM	M	39.32003	-120.65615	3	1377	67	Juvenile	9.5	On rock near creek	33.02	38	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW229	188370	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	3:37 PM	F	39.32101	-120.656	3	1369	68	Juvenile	9.4	On rocks b/w trail and creek	34.28	46	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW230	188371	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	3:45 PM	F	39.32119	-120.65613	3	1392	62	Juvenile	8.8	On rock near trail	34.91	41	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW231	188372	Sceloporus	occidentalis	"26-July, 2016"	Donner Pass	Emerald Pools	4:10 PM	M	39.32114	-120.65601	3	1382	63	Juvenile	9.3	On rock near trail	31.11	44	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW238	188378	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Emerald Pools	11:04 AM	F	39.32111	-120.65588	3	1370	64	Juvenile	8.7	On rock b/w trail and pools	31.2	44	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW242	188382	Sceloporus	occidentalis	"28-July, 2016"	Donner Pass	Emerald Pools	11:55 AM	M	39.32106	-120.65627	4	1375	59	Juvenile	7.1	On rock b/w fire ring and trail	28.78	43	1666	28.6	-2.1	204.7815131	18.7	3.6
+VW026	188207	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:01 PM	F	34.37181	-117.71168	2	2253	48	Juvenile	4.4	At Inspiration Point on fecepost	35.28	42	732	25	-4.8	121.6027643	16	1.6
+VW027	188208	Sceloporus	occidentalis	"7-June, 2016"	Table Mountain	Inspiration Point	5:01 PM	M	34.37183	-117.71175	2	2256	42	Juvenile	2.9	At inspiration Point on fecepost	33.42	37	732	25	-4.8	121.6027643	16	1.6
+VW040	188221	Sceloporus	occidentalis	"10-June, 2016"	Table Mountain	Inspiration Point	5:30 PM	M	34.37255	-117.71037	2	2250	55	Juvenile	6.2	In fencepost at PCT lot	27.09	43	732	25	-4.8	121.6027643	16	1.6
+VW041	188222	Sceloporus	occidentalis	"11-June, 2016"	Table Mountain	Inspiration Point	10:55 AM	M	34.37236	-117.71084	2	2247	58	Juvenile	7	In crevice on fencepost at PCT lot	33.4	41	732	25	-4.8	121.6027643	16	1.6
+VW057	188238	Sceloporus	occidentalis	"14-June, 2016"	Table Mountain	Inspiration Point	1:03 PM	F	34.372	-117.71193	2	2249	51	Juvenile	4.9	On fencepost	41.74	40	732	25	-4.8	121.6027643	16	1.6
+VW070	188251	Sceloporus	occidentalis	"17-June, 2016"	Table Mountain	Inspiration Point	12:08 PM	F	34.37185	-117.71155	2	2256	59	Juvenile	7.9	On rocks	31.75	41	732	25	-4.8	121.6027643	16	1.6
+VW076	188257	Sceloporus	occidentalis	"18-June, 2016"	Table Mountain	Inspiration Point	3:31 PM	M	34.37185	-117.71151	2	2253	46	Juvenile	3.7	On fencepost at Inspiration Point	36.56	39	732	25	-4.8	121.6027643	16	1.6
+VW196	188341	Sceloporus	occidentalis	"17-July, 2016"	Mt Shasta	Lake Siskiyou	3:42 PM	M	41.28107	-122.32938	3	979	58	Juvenile	6.9	In manzanita bush	34.42	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW199	188342	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	5:26 PM	M	41.27782	-122.33279	2	997	62	Juvenile	9.3	On rock near path	32.42	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW202	188345	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	5:57 PM	F	41.27994	-122.32943	2	976	67	Juvenile	9.7	On ground near beach	46.31	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW205	188348	Sceloporus	occidentalis	"19-July, 2016"	Mt Shasta	Lake Siskiyou	6:47 PM	F	41.28002	-122.32939	3	986	62	Juvenile	9.4	On rocks near beach	26.66	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW211	188353	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	6:22 PM	F	41.27972	-122.32919	2	984	66	Juvenile	9.7	On rock in boulder field	34.04	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW212	188354	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	6:28 PM	M	41.27953	-122.3292	2	980	63	Juvenile	9.9	On rock in boulder field	35.26	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW213	188355	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	6:57 PM	F	41.28003	-122.32964	3	974	69	Juvenile	8.5	On rock near lake shore	34.31	NA	1032	30	-4.1	116.8491491	18.1	2.3
+VW215	188357	Sceloporus	occidentalis	"21-July, 2016"	Mt Shasta	Lake Siskiyou	7:35 PM	F	41.27848	-122.3342	3	975	51	Juvenile	5	On rock near trail	30.96	NA	1032	30.4	-3.9	113.5375983	18.5	2.5
+VW139	188295	Sceloporus	occidentalis	"1-July, 2016"	Big Pine Creek	Sage Flat	4:28 PM	M	37.13055	-118.41381	2	2260	60	Juvenile	8.1	On rock near Glacier Lodge Rd.	39.62	NA	349	24.8	-7.3	62.12728082	15.4	-0.7
+VW010	188177	Sceloporus	occidentalis	"3-June, 2016"	Big Bear	Thurman Flats	2:17 PM	F	34.1024	-117.01503	2	1033	49	Juvenile	5	On rockpile next to stream	36.08	NA	548	33.8	0.4	47.97422698	23	7.5
+VW015	188182	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	12:52 PM	F	34.10353	-117.01329	3	1033	71	Juvenile	9.9	On log along trail	41.63	NA	548	33.8	0.4	47.97422698	23	7.5
+VW018	188185	Sceloporus	occidentalis	"4-June, 2016"	Big Bear	Thurman Flats	1:37 PM	F	34.10246	-117.01538	3	1030	59	Juvenile	8.8	On rocks under canopy	38.84	NA	548	33.8	0.4	47.97422698	23	7.5
+VW080	188193	Sceloporus	occidentalis	"20-June, 2016"	Big Bear	Thurman Flats	12:39 PM	M	34.10248	-117.01342	2	1032	61	Juvenile	8	On rock under canopy	30.64	NA	548	33.8	0.4	47.97422698	23	7.5
+VW087	188200	Sceloporus	occidentalis	"21-June, 2016"	Big Bear	Thurman Flats	1:19 PM	M	34.10215	-117.01233	2	1042	55	Juvenile	7	On rock near stream	37.97	NA	548	33.8	0.4	47.97422698	23	7.5
+VW122	188280	Sceloporus	occidentalis	"28-June, 2016"	Bishop Creek	Transect: BC - BT	3:35 PM	F	37.32335	-118.50058	3	1587	59	Juvenile	7.7	On wall next to lawn	28.22	40	280	30.7	-6.2	30.97173829	19.7	1.8
+VW175	188324	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	2:59 PM	F	37.27326	-118.57323	3	2184	61	Juvenile	7.7	On rock next to Bishop Cr. dam	37.7	45	367	25.1	-7.1	63.31953071	15.4	-0.4
+VW176	188325	Sceloporus	occidentalis	"5-July, 2016"	Bishop Creek	Transect: BC - BT	3:16 PM	M	37.27449	-118.57259	2	2175	58	Juvenile	7	On rock near Bishop Cr.	36.33	43	367	25.1	-7.1	63.31953071	15.4	-0.4
+VW063	188244	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	2:21 PM	F	34.3964	-117.80596	2	1445	61	Juvenile	8	On cut stump	32.64	38	666	30	-1.9	74.2980176	20.6	4.7
+VW068	188249	Sceloporus	occidentalis	"16-June, 2016"	Table Mountain	Transect: BRC - IP	5:46 PM	F	34.41513	-117.83179	3	1282	59	Juvenile	7.9	On wooden fence	32.51	39	569	31	-1.3	59.31346489	21.4	5.3
