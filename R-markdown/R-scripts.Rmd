@@ -1,0 +1,1060 @@
+---
+title: "Environmental-variability-functional-traits"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+---
+
+```{r}
+# Load libraries
+library(readr)
+library(ggplot2)
+library(nlme)
+library(plyr)
+library(gplots)
+library(gstat)
+library(sp)
+require(MuMIn)
+```
+
+```{r}
+# SE function
+se<-function(x) sqrt(var(x, na.rm=T)/length(x))
+
+ggplotRegression <- function (fit) {
+  require(ggplot2)
+  ggplot(fit$model, aes_string(x = names(fit$model)[2], y = names(fit$model)[1])) + 
+    geom_point() +
+    stat_smooth(method = "lm", col = "red") +
+    labs(title = paste("Adj R2 = ",signif(summary(fit)$adj.r.squared, 5),
+                       "Intercept =",signif(fit$coef[[1]],5 ),
+                       " Slope =",signif(fit$coef[[2]], 5),
+                       " P =",signif(summary(fit)$coef[2,4], 5)))
+}
+```
+
+
+```{r}
+Sceloporus_specimens = read_delim("Sceloporus_specimens.txt", 
+                                  "\t", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+# Select lizards >= 10 g only
+Sceloporus_specimens_Age10g = Sceloporus_specimens[which(Sceloporus_specimens$Age10g=='Adult'),]
+getwd()
+```
+
+```{r}
+# Descriptive stats
+# SVL
+summary(Sceloporus_specimens_Age10g$SVL_mm)  
+# Mass_g
+summary(Sceloporus_specimens_Age10g$Mass_g)
+# Dorsal scale counts
+summary(Sceloporus_specimens_Age10g$Scales_dorsal)
+# Dorsal color
+summary(Sceloporus_specimens_Age10g$Color_Dorsal)
+```
+
+```{r}
+# data summary function
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+  return(data_sum)
+}
+```
+
+```{r}
+# Table 1
+df3.SVL <- data_summary(Sceloporus_specimens_Age10g, varname="SVL_mm",
+                    groupnames=c("Site"))
+write.table(df3.SVL, "df3.SVL.txt⁩", sep="\t")
+df3.dorsal.scales <- data_summary(Sceloporus_specimens_Age10g, varname="Scales_dorsal", 
+                                   groupnames=c("Site"))
+write.table(df3.dorsal.scales, "df3.dorsal.scales.txt⁩", sep="\t")
+df3.dorsal.color <- data_summary(Sceloporus_specimens_Age10g, varname="Color_Dorsal", 
+                                  groupnames=c("Site"))
+write.table(df3.dorsal.color, "df3.dorsal.color.txt⁩", sep="\t")
+```
+
+```{r}
+# SVL
+par(mfrow=c(1,1))
+hist(Sceloporus_specimens_Age10g$SVL_mm, breaks = 20)
+```
+
+```{r}
+# Summer
+# Mean Temp of Warmest Quarter
+
+par(mfrow=c(1,1))
+par(mar=c(5,5,2,2))
+
+library(lme4)
+library(lmerTest)
+reg1d.lmer = lmer(SVL_mm ~ BIO10_meanTwarmestQ + (1|BIO10_meanTwarmestQ), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1d.lmer)
+anova(reg1d.lmer)
+plot(reg1d.lmer)
+r.squaredGLMM(reg1d.lmer)
+
+library(ggplot2)
+reg1d.1 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO10_meanTwarmestQ, y = SVL_mm)) + 
+  geom_point()
+reg1d.1 + theme_classic() + labs(x = "Mean Temperature of Warmest Quarter (°C)", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+# Max Temp Warmest Month
+
+library(lme4)
+library(lmerTest)
+reg1e.lmer = lmer(SVL_mm ~ BIO5_maxTwarmestMo + (1|BIO5_maxTwarmestMo), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1e.lmer)
+anova(reg1e.lmer)
+plot(reg1e.lmer)
+r.squaredGLMM(reg1e.lmer)
+
+library(ggplot2)
+reg1d.1 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO5_maxTwarmestMo, y = SVL_mm)) + 
+  geom_point()
+reg1d.1 + theme_classic() + labs(x = "Maximum Temperature of Warmest Month (°C)", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+# Mean Temp of Coldest Quarter
+
+library(lme4)
+library(lmerTest)
+reg1b.lmer = lmer(SVL_mm ~ BIO11_meanTcoldestQ + (1|BIO11_meanTcoldestQ), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1b.lmer)
+anova(reg1b.lmer)
+plot(reg1b.lmer)
+r.squaredGLMM(reg1b.lmer)
+
+library(ggplot2)
+reg1d.1 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO11_meanTcoldestQ, y = SVL_mm)) + 
+  geom_point()
+reg1d.1 + theme_classic() + labs(x = "Mean Temperature of Coldest Quarter (°C)", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+# Min temp coldest month
+
+library(lme4)
+library(lmerTest)
+reg1c.lmer = lmer(SVL_mm ~ BIO6_minTcoldestMo + (1|BIO6_minTcoldestMo), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1c.lmer)
+anova(reg1c.lmer)
+plot(reg1c.lmer)
+r.squaredGLMM(reg1c.lmer)
+
+library(ggplot2)
+reg1c.1 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO6_minTcoldestMo, y = SVL_mm)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+reg1c.1 + theme_classic() + labs(x = "Minimum Temperature of Coldest Month (°C)", y = "Snout-Vent Length (mm)")
+
+reg1c <- lm(Sceloporus_specimens_Age10g$SVL_mm~Sceloporus_specimens_Age10g$BIO6_minTcoldestMo)
+summary(reg1c)
+```
+
+
+## Spatially-explicit models
+
+note: some values my differ slightly from publication values due to variation in random jitter function of gps points.
+  seed set for all spatially explict models in this example for reproducibility.
+
+```{r}
+# Load dataset
+library(readr)
+library(ggplot2)
+library(nlme)
+library(plyr)
+library(gplots)
+
+# SE function
+se<-function(x) sqrt(var(x, na.rm=T)/length(x))
+```
+
+```{r}
+Sceloporus_VertNet = read_delim("Sceloporus_occidentalis_VertNet.txt", 
+                                  "\t", escape_double = FALSE, trim_ws = TRUE)
+
+summary(Sceloporus_VertNet)
+```
+
+```{r}
+# Adjust temperature scale
+Sceloporus_VertNet$bio_5 = Sceloporus_VertNet$bio_5/10
+Sceloporus_VertNet$bio_6 = Sceloporus_VertNet$bio_6/10
+Sceloporus_VertNet$bio_10 = Sceloporus_VertNet$bio_10/10
+Sceloporus_VertNet$bio_11 = Sceloporus_VertNet$bio_11/10
+```
+
+```{r}
+# Select lizards 64 g and larger only
+Sceloporus_VertNet_65mm = Sceloporus_VertNet[which(Sceloporus_VertNet$SVL_mm>63.5),]
+```
+
+```{r}
+summary(Sceloporus_VertNet_65mm)
+hist(Sceloporus_VertNet_65mm$SVL_mm)
+```
+
+
+# Mean Temperature of Warmest Quarter (bio10)
+
+```{r}
+library(rgdal)
+xy = cbind(Sceloporus_VertNet_65mm$decimallongitude, Sceloporus_VertNet_65mm$decimallatitude)
+utms = project(xy, "+proj=utm +zone=11 ellps=WGS84")
+Sceloporus_VertNet_65mm$northing = utms[,1]/1000
+Sceloporus_VertNet_65mm$easting = utms[,2]/1000
+```
+
+```{r}
+library(sp)
+Sceloporus_VertNet_65mm.sp = Sceloporus_VertNet_65mm
+coordinates(Sceloporus_VertNet_65mm.sp) = c('easting', 'northing')
+Sceloporus_VertNet_65mm.sp$SVL_mm.dev = Sceloporus_VertNet_65mm.sp$SVL_mm - mean(Sceloporus_VertNet_65mm.sp$SVL_mm)
+bubble(Sceloporus_VertNet_65mm.sp, zcol = 'SVL_mm.dev', scales = list(draw = T))
+```
+
+```{r}
+library(geoR)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data = Sceloporus_VertNet_65mm$SVL_mm)
+par(mfrow=c(1,1))
+plot(v1)
+```
+
+```{r}
+library(ncf)
+ncf.scor <- spline.correlog(Sceloporus_VertNet_65mm$easting, Sceloporus_VertNet_65mm$northing, Sceloporus_VertNet_65mm$SVL_mm,
+                            resamp=10, quiet = FALSE)
+plot(ncf.scor)
+```
+
+```{r}
+mod.nocorr = lm(SVL_mm ~ bio_10, data = Sceloporus_VertNet_65mm)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data =resid(mod.nocorr))
+plot(v1)
+```
+
+```{r}
+# jitter GPS points 
+set.seed(9999)
+Sceloporus_VertNet_65mm$j.easting = jitter(Sceloporus_VertNet_65mm$easting)
+Sceloporus_VertNet_65mm$j.northing = jitter(Sceloporus_VertNet_65mm$northing)
+
+```
+
+```{r}
+## corExp
+SVL_mm.corExp = gls(SVL_mm ~ bio_10, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corExp(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corExp_1a = SVL_mm.corExp
+summary(SVL_mm.corExp_1a)                            
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_1a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+## corGaus
+SVL_mm.corGaus = gls(SVL_mm ~ bio_10, 
+                     data = Sceloporus_VertNet_65mm, 
+                     correlation = corGaus(form = ~j.easting + j.northing, 
+                                           nugget = TRUE, 
+                                           value = c(50, 0.5)))
+SVL_mm.corGaus_1b = SVL_mm.corGaus
+summary(SVL_mm.corGaus_1b)      
+```
+
+```{r}
+SVL_mm.corGaus.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corGaus_1b, type = "normalized"))
+plot(SVL_mm.corGaus.var)
+```
+
+```{r}
+# corLin
+SVL_mm.corLin = gls(SVL_mm ~bio_10, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corLin(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corLin_1c = SVL_mm.corLin
+summary(SVL_mm.corLin_1c)                            
+```
+
+```{r}
+SVL_mm.corLin.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corLin_1c, type = "normalized"))
+plot(SVL_mm.corLin.var)
+```
+
+```{r}
+# corRatio
+SVL_mm.corRatio = gls(SVL_mm ~ bio_10, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corRatio(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corRatio_1d = SVL_mm.corRatio
+summary(SVL_mm.corRatio_1d)                            
+```
+
+```{r}
+SVL_mm.corRatio.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corRatio_1d, type = "normalized"))
+plot(SVL_mm.corRatio.var)
+```
+
+```{r}
+# corSpher
+SVL_mm.corSpher = gls(SVL_mm ~ bio_10, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corSpher(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corSpher_1e = SVL_mm.corSpher
+summary(SVL_mm.corSpher_1e)                            
+```
+
+```{r}
+SVL_mm.corSpher.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corSpher_1e, type = "normalized"))
+plot(SVL_mm.corSpher.var)
+```
+
+```{r}
+# calculate AIC to select best model
+AIC(SVL_mm.corExp_1a, SVL_mm.corGaus_1b, SVL_mm.corLin_1c, SVL_mm.corRatio_1d, SVL_mm.corSpher_1e)
+# SVL_mm.corExp is best
+# SVL_mm.corSpher & SVL_mm.corLin are close
+```
+
+```{r}
+# best model
+summary(SVL_mm.corExp_1a)
+```
+
+```{r}
+# other good models
+summary(SVL_mm.corLin_1c)
+summary(SVL_mm.corSpher_1e)
+# all give same interpretation
+```
+
+```{r}
+library(ggplot2)
+plot3 = ggplot(Sceloporus_VertNet_65mm, aes(x = bio_10, y = SVL_mm)) + 
+  geom_point()
+plot3 + theme_classic() + labs(x = "Mean Temperature of Warmest Quarter", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+reg3 <- lm(Sceloporus_VertNet_65mm$SVL_mm~Sceloporus_VertNet_65mm$bio_10)
+summary(reg3)
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_1a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+#plot
+library(ggplot2)
+plot3.1 = ggplot(Sceloporus_VertNet_65mm, aes(x = bio_10, y = SVL_mm)) + 
+  geom_point()
+plot3.1 + theme_classic() + labs(x = "Mean Temperature of Warmest Quarter", y = "Snout-Vent Length (mm)")
+```
+
+### Max Temp of Warmest Month (bio_5)
+
+```{r}
+library(rgdal)
+xy = cbind(Sceloporus_VertNet_65mm$decimallongitude, Sceloporus_VertNet_65mm$decimallatitude)
+utms = project(xy, "+proj=utm +zone=11 ellps=WGS84")
+Sceloporus_VertNet_65mm$northing = utms[,1]/1000
+Sceloporus_VertNet_65mm$easting = utms[,2]/1000
+```
+
+```{r}
+library(sp)
+Sceloporus_VertNet_65mm.sp = Sceloporus_VertNet_65mm
+coordinates(Sceloporus_VertNet_65mm.sp) = c('easting', 'northing')
+Sceloporus_VertNet_65mm.sp$SVL_mm.dev = Sceloporus_VertNet_65mm.sp$SVL_mm - mean(Sceloporus_VertNet_65mm.sp$SVL_mm)
+bubble(Sceloporus_VertNet_65mm.sp, zcol = 'SVL_mm.dev', scales = list(draw = T))
+```
+
+```{r}
+library(geoR)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data = Sceloporus_VertNet_65mm$SVL_mm)
+par(mfrow=c(1,1))
+plot(v1)
+```
+
+```{r}
+library(ncf)
+ncf.scor <- spline.correlog(Sceloporus_VertNet_65mm$easting, Sceloporus_VertNet_65mm$northing, Sceloporus_VertNet_65mm$SVL_mm,
+                            resamp=10, quiet = FALSE)
+plot(ncf.scor)
+```
+
+```{r}
+mod.nocorr = lm(SVL_mm ~ bio_5, data = Sceloporus_VertNet_65mm)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data =resid(mod.nocorr))
+plot(v1)
+```
+
+```{r}
+# jitter GPS points 
+set.seed(8888)
+Sceloporus_VertNet_65mm$j.easting = jitter(Sceloporus_VertNet_65mm$easting)
+Sceloporus_VertNet_65mm$j.northing = jitter(Sceloporus_VertNet_65mm$northing)
+```
+
+```{r}
+## corExp
+SVL_mm.corExp = gls(SVL_mm ~ bio_5, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corExp(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corExp_2a = SVL_mm.corExp
+summary(SVL_mm.corExp_2a)                            
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_2a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+## corGaus
+SVL_mm.corGaus = gls(SVL_mm ~ bio_5, 
+                     data = Sceloporus_VertNet_65mm, 
+                     correlation = corGaus(form = ~j.easting + j.northing, 
+                                           nugget = TRUE, 
+                                           value = c(50, 0.5)))
+SVL_mm.corGaus_2b = SVL_mm.corGaus
+summary(SVL_mm.corGaus_2b)      
+```
+
+```{r}
+SVL_mm.corGaus.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corGaus_2b, type = "normalized"))
+plot(SVL_mm.corGaus.var)
+```
+
+```{r}
+# corLin
+SVL_mm.corLin = gls(SVL_mm ~bio_5, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corLin(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corLin_2c = SVL_mm.corLin
+summary(SVL_mm.corLin_2c)  
+```
+
+```{r}
+SVL_mm.corLin.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corLin_2c, type = "normalized"))
+plot(SVL_mm.corLin.var)
+```
+
+```{r}
+# corRatio
+SVL_mm.corRatio = gls(SVL_mm ~ bio_5, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corRatio(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corRatio_2d = SVL_mm.corRatio
+summary(SVL_mm.corRatio_2d)                            
+```
+
+```{r}
+SVL_mm.corRatio.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corRatio_2d, type = "normalized"))
+plot(SVL_mm.corRatio.var)
+```
+
+```{r}
+# corSpher
+SVL_mm.corSpher = gls(SVL_mm ~ bio_5, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corSpher(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corSpher_2e = SVL_mm.corSpher
+summary(SVL_mm.corSpher_2e)                            
+```
+
+```{r}
+SVL_mm.corSpher.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corSpher_2e, type = "normalized"))
+plot(SVL_mm.corSpher.var)
+```
+
+```{r}
+# calculate AIC to select best model
+AIC(SVL_mm.corExp_2a, SVL_mm.corGaus_2b, SVL_mm.corLin_2c, SVL_mm.corRatio_2d, SVL_mm.corSpher_2e)
+# SVL_mm.corExp
+```
+
+```{r}
+# best model
+summary(SVL_mm.corExp_2a)
+```
+
+```{r}
+# other models with support
+summary(SVL_mm.corLin_2c)
+summary(SVL_mm.corSpher_2e)
+# same interpretation
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_2a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+library(ggplot2)
+plot4 = ggplot(Sceloporus_VertNet_65mm, aes(x = bio_5, y = SVL_mm)) + 
+  geom_point()
+plot4 + theme_classic() + labs(x = "Maximum Temperature of Warmest Month", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+reg4 <- lm(Sceloporus_VertNet_65mm$SVL_mm~Sceloporus_VertNet_65mm$bio_5)
+summary(reg4)
+```
+
+# Winter
+# Mean Temp of Coldest Quarter (bio_11)
+
+```{r}
+library(rgdal)
+xy = cbind(Sceloporus_VertNet_65mm$decimallongitude, Sceloporus_VertNet_65mm$decimallatitude)
+utms = project(xy, "+proj=utm +zone=11 ellps=WGS84")
+Sceloporus_VertNet_65mm$northing = utms[,1]/1000
+Sceloporus_VertNet_65mm$easting = utms[,2]/1000
+```
+
+```{r}
+library(sp)
+Sceloporus_VertNet_65mm.sp = Sceloporus_VertNet_65mm
+coordinates(Sceloporus_VertNet_65mm.sp) = c('easting', 'northing')
+Sceloporus_VertNet_65mm.sp$SVL_mm.dev = Sceloporus_VertNet_65mm.sp$SVL_mm - mean(Sceloporus_VertNet_65mm.sp$SVL_mm)
+bubble(Sceloporus_VertNet_65mm.sp, zcol = 'SVL_mm.dev', scales = list(draw = T))
+```
+
+```{r}
+library(geoR)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data = Sceloporus_VertNet_65mm$SVL_mm)
+par(mfrow=c(1,1))
+plot(v1)
+```
+
+```{r}
+library(ncf)
+ncf.scor <- spline.correlog(Sceloporus_VertNet_65mm$easting, Sceloporus_VertNet_65mm$northing, Sceloporus_VertNet_65mm$SVL_mm,
+                            resamp=10, quiet = FALSE)
+plot(ncf.scor)
+```
+
+```{r}
+mod.nocorr = lm(SVL_mm ~ bio_11, data = Sceloporus_VertNet_65mm)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data =resid(mod.nocorr))
+plot(v1)
+```
+
+```{r}
+# jitter GPS points 
+set.seed(9999)
+Sceloporus_VertNet_65mm$j.easting = jitter(Sceloporus_VertNet_65mm$easting)
+Sceloporus_VertNet_65mm$j.northing = jitter(Sceloporus_VertNet_65mm$northing)
+```
+
+```{r}
+## corExp
+SVL_mm.corExp = gls(SVL_mm ~ bio_11, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corExp(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corExp_3a = SVL_mm.corExp
+summary(SVL_mm.corExp_3a)                            
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_3a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+## corGaus
+SVL_mm.corGaus = gls(SVL_mm ~ bio_11, 
+                     data = Sceloporus_VertNet_65mm, 
+                     correlation = corGaus(form = ~j.easting + j.northing, 
+                                           nugget = TRUE, 
+                                           value = c(50, 0.5)))
+SVL_mm.corGaus_3b = SVL_mm.corGaus
+summary(SVL_mm.corGaus_3b)      
+```
+
+```{r}
+SVL_mm.corGaus.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corGaus_3b, type = "normalized"))
+plot(SVL_mm.corGaus.var)
+```
+
+```{r}
+# corLin
+SVL_mm.corLin = gls(SVL_mm ~bio_11, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corLin(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corLin_3c = SVL_mm.corLin
+summary(SVL_mm.corLin_3c)                            
+```
+
+```{r}
+SVL_mm.corLin.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corLin_3c, type = "normalized"))
+plot(SVL_mm.corLin.var)
+```
+
+```{r}
+# corRatio
+SVL_mm.corRatio = gls(SVL_mm ~ bio_11, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corRatio(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corRatio_3d = SVL_mm.corRatio
+summary(SVL_mm.corRatio_3d)                            
+```
+
+```{r}
+SVL_mm.corRatio.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corRatio_3d, type = "normalized"))
+plot(SVL_mm.corRatio.var)
+```
+
+```{r}
+# corSpher
+SVL_mm.corSpher = gls(SVL_mm ~ bio_11, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corSpher(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corSpher_3e = SVL_mm.corSpher
+summary(SVL_mm.corSpher_3e)                            
+```
+
+```{r}
+SVL_mm.corSpher.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corSpher_3e, type = "normalized"))
+plot(SVL_mm.corSpher.var)
+```
+
+```{r}
+# calculate AIC to select best model
+AIC(SVL_mm.corExp_3a, SVL_mm.corGaus_3b, SVL_mm.corLin_3c, SVL_mm.corRatio_3d, SVL_mm.corSpher_3e)
+#SVL_mm.corLin
+```
+
+```{r}
+summary(SVL_mm.corLin_3c)
+#best support
+```
+
+```{r}
+# also look at these with approx. equal support
+summary(SVL_mm.corExp_3a)
+summary(SVL_mm.corSpher_3e)
+# same result
+```
+
+```{r}
+reg1 <- lm(Sceloporus_VertNet_65mm$SVL_mm~Sceloporus_VertNet_65mm$bio_11)
+summary(reg1)
+# abline(reg1, col = "black")
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_3a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+#plot
+library(ggplot2)
+plot1 = ggplot(Sceloporus_VertNet_65mm, aes(x = bio_11, y = SVL_mm)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+plot1 + theme_classic() + labs(x = "Mean Temperature of Coldest Quarter", y = "Snout-vent Length (mm)")
+```
+
+### Min Temp of Coldest Month (bio_6)
+```{r}
+library(rgdal)
+xy = cbind(Sceloporus_VertNet_65mm$decimallongitude, Sceloporus_VertNet_65mm$decimallatitude)
+utms = project(xy, "+proj=utm +zone=11 ellps=WGS84")
+Sceloporus_VertNet_65mm$northing = utms[,1]/1000
+Sceloporus_VertNet_65mm$easting = utms[,2]/1000
+```
+
+```{r}
+library(sp)
+Sceloporus_VertNet_65mm.sp = Sceloporus_VertNet_65mm
+coordinates(Sceloporus_VertNet_65mm.sp) = c('easting', 'northing')
+Sceloporus_VertNet_65mm.sp$SVL_mm.dev = Sceloporus_VertNet_65mm.sp$SVL_mm - mean(Sceloporus_VertNet_65mm.sp$SVL_mm)
+bubble(Sceloporus_VertNet_65mm.sp, zcol = 'SVL_mm.dev', scales = list(draw = T))
+```
+
+```{r}
+library(geoR)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data = Sceloporus_VertNet_65mm$SVL_mm)
+par(mfrow=c(1,1))
+plot(v1)
+```
+
+```{r}
+library(ncf)
+ncf.scor <- spline.correlog(Sceloporus_VertNet_65mm$easting, Sceloporus_VertNet_65mm$northing, Sceloporus_VertNet_65mm$SVL_mm,
+                            resamp=10, quiet = FALSE)
+plot(ncf.scor)
+```
+
+```{r}
+mod.nocorr = lm(SVL_mm ~ bio_6, data = Sceloporus_VertNet_65mm)
+v1 <- variog(coords = Sceloporus_VertNet_65mm[,c('easting', 'northing')], data =resid(mod.nocorr))
+plot(v1)
+```
+
+```{r}
+# jitter GPS points
+set.seed(9999)
+Sceloporus_VertNet_65mm$j.easting = jitter(Sceloporus_VertNet_65mm$easting)
+Sceloporus_VertNet_65mm$j.northing = jitter(Sceloporus_VertNet_65mm$northing)
+```
+
+```{r}
+## corExp
+SVL_mm.corExp = gls(SVL_mm ~ bio_6, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corExp(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corExp_4a = SVL_mm.corExp
+summary(SVL_mm.corExp_4a)                            
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_4a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+## corGaus
+SVL_mm.corGaus = gls(SVL_mm ~ bio_6, 
+                     data = Sceloporus_VertNet_65mm, 
+                     correlation = corGaus(form = ~j.easting + j.northing, 
+                                           nugget = TRUE, 
+                                           value = c(50, 0.5)))
+SVL_mm.corGaus_4b = SVL_mm.corGaus
+summary(SVL_mm.corGaus_4b)      
+```
+
+```{r}
+SVL_mm.corGaus.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corGaus_4b, type = "normalized"))
+plot(SVL_mm.corGaus.var)
+```
+
+```{r}
+# corLin
+SVL_mm.corLin = gls(SVL_mm ~bio_6, 
+                    data = Sceloporus_VertNet_65mm, 
+                    correlation = corLin(form = ~j.easting + j.northing, 
+                                         nugget = TRUE, 
+                                         value = c(50, 0.5)))
+SVL_mm.corLin_4c = SVL_mm.corLin
+summary(SVL_mm.corLin_4c)                            
+```
+
+```{r}
+SVL_mm.corLin.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corLin_4c, type = "normalized"))
+plot(SVL_mm.corLin.var)
+```
+
+```{r}
+# corRatio
+SVL_mm.corRatio = gls(SVL_mm ~ bio_6, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corRatio(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corRatio_4d = SVL_mm.corRatio
+summary(SVL_mm.corRatio_4d)                            
+```
+
+```{r}
+SVL_mm.corRatio.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corRatio_4d, type = "normalized"))
+plot(SVL_mm.corRatio.var)
+```
+
+```{r}
+# corSpher
+SVL_mm.corSpher = gls(SVL_mm ~ bio_6, 
+                      data = Sceloporus_VertNet_65mm, 
+                      correlation = corSpher(form = ~j.easting + j.northing, 
+                                             nugget = TRUE, 
+                                             value = c(50, 0.5)))
+SVL_mm.corSpher_4e = SVL_mm.corSpher
+summary(SVL_mm.corSpher_4e)                            
+```
+
+```{r}
+SVL_mm.corSpher.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corSpher_4e, type = "normalized"))
+plot(SVL_mm.corSpher.var)
+```
+
+```{r}
+# calculate AIC to select best model
+AIC(SVL_mm.corExp_4a, SVL_mm.corGaus_4b, SVL_mm.corLin_4c, SVL_mm.corRatio_4d, SVL_mm.corSpher_4e)
+# SVL_mm.corLin
+```
+
+```{r}
+# best support
+summary(SVL_mm.corLin_4c)
+```
+
+```{r}
+# also good
+summary(SVL_mm.corExp_4a)
+summary(SVL_mm.corSpher_4e)
+# same result
+```
+
+```{r}
+reg2 <- lm(Sceloporus_VertNet_65mm$SVL_mm~Sceloporus_VertNet_65mm$bio_6)
+summary(reg2)
+```
+
+```{r}
+#variogram
+SVL_mm.corExp.var <- variog(coords = Sceloporus_VertNet_65mm[,c('j.easting', 'j.northing')], data = resid(SVL_mm.corExp_4a, type = "normalized"))
+plot(SVL_mm.corExp.var)
+```
+
+```{r}
+# plot
+library(ggplot2)
+plot2 = ggplot(Sceloporus_VertNet_65mm, aes(x = bio_6, y = SVL_mm)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+plot2 + theme_classic() + labs(x = "Minimum Temperature of Coldest Month", y = "Snout-vent Length (mm)")
+```
+
+
+
+
+
+
+```{r}
+# Scales
+
+# Load libraries
+library(readr)
+library(ggplot2)
+library(nlme)
+library(plyr)
+library(gplots)
+library(gstat)
+library(sp)
+
+# SE function
+se<-function(x) sqrt(var(x, na.rm=T)/length(x))
+```
+
+```{r}
+Sceloporus_specimens = read_delim("Sceloporus_specimens.txt", 
+                                  "\t", escape_double = FALSE, trim_ws = TRUE)
+summary(Sceloporus_specimens)
+```
+
+```{r}
+# Select lizards > 10 g only
+Sceloporus_specimens_Age10g = Sceloporus_specimens[which(Sceloporus_specimens$Age10g=='Adult'),]
+```
+
+```{r}
+# select lizards with scale data only
+df.complete = subset(Sceloporus_specimens_Age10g, !(is.na(Scales_dorsal)))
+
+plot(df.complete$Scales_dorsal, df.complete$SVL_mm)
+SVL.Scales = lm(df.complete$SVL_mm~df.complete$Scales_dorsal)
+abline(SVL.Scales, col = "red")
+SVL.Scales.resid = resid(SVL.Scales)
+SVL.Scales.predict = predict(SVL.Scales)
+length(resid(SVL.Scales))
+length(predict(SVL.Scales))
+
+par(mfrow=c(1,1))
+plot(predict(SVL.Scales), resid(SVL.Scales))
+abline(0,0)
+# POSITIVE residuals are larger scales, NEGATIVE resuduals are smaller scales
+```
+
+```{r}
+resid.Scales_dorsal = resid(SVL.Scales)
+df.complete$resid.Scales_dorsal = resid.Scales_dorsal
+```
+
+```{r}
+# Correlations among scale traits
+
+df.complete$Scales_size = (df.complete$SVL_mm/df.complete$Scales_dorsal)
+
+df.complete$Scale.count = df.complete$Scales_dorsal
+df.complete$Scale.size = df.complete$Scales_size
+
+# size vs number of scales
+cor.test(df.complete$SVL_mm, df.complete$Scales_dorsal)
+
+# size vs mean scale size
+cor.test(df.complete$SVL_mm, df.complete$Scale.size)
+```
+
+### SIMPLE CORRELATION FIGURES ###
+```{r}
+library(ggplot2)
+modelR1 = ggplot(df.complete, aes(x = SVL_mm, y = Scales_dorsal)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+modelR1 + theme_classic() + labs(x = "Snout-Vent Length (mm)", y = "Number of Dorsal Scales")
+
+library(ggplot2)
+modelR2 = ggplot(df.complete, aes(x = SVL_mm, y = Scale.size)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+modelR2 + theme_classic() + labs(x = "Snout-Vent Length (mm)", y = "Mean Dorsal Scale Size (mm)")
+```
+
+```{r}
+# Mean Temperature of Warmest Quarter
+
+reg3d2.lmer.BIO10 = lmer(resid.Scales_dorsal ~ BIO10_meanTwarmestQ + (1|BIO10_meanTwarmestQ), REML = F, na.action=na.omit, data=df.complete)
+#summary(reg3d2.lmer.BIO10)
+anova(reg3d2.lmer.BIO10)
+plot(reg3d2.lmer.BIO10)
+r.squaredGLMM(reg3d2.lmer.BIO10)
+
+library(ggplot2)
+plot2 = ggplot(df.complete, aes(x = BIO10_meanTwarmestQ, y = SVL_mm)) + 
+  geom_point()
+plot2 + theme_classic() + labs(x = "Mean Temperature of Warmest Quarter (°C)", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+# Maximum Temperature of Warmest Month
+
+reg3d2.lmer.BIO5 = lmer(resid.Scales_dorsal ~ BIO5_maxTwarmestMo + (1|BIO5_maxTwarmestMo), REML = F, na.action=na.omit, data=df.complete)
+#summary(reg3d2.lmer.BIO5)
+anova(reg3d2.lmer.BIO5)
+plot(reg3d2.lmer.BIO5)
+r.squaredGLMM(reg3d2.lmer.BIO5)
+
+library(ggplot2)
+plot2 = ggplot(df.complete, aes(x = BIO5_maxTwarmestMo, y = SVL_mm)) + 
+  geom_point()
+plot2 + theme_classic() + labs(x = "Maximum Temperature of Warmest Month (°C)", y = "Snout-Vent Length (mm)")
+```
+
+```{r}
+# Aridity
+
+reg3d2.lmer = lmer(resid.Scales_dorsal ~ Aridity_index + (1|Aridity_index), REML = F, na.action=na.omit, data=df.complete)
+summary(reg3d2.lmer)
+anova(reg3d2.lmer)
+r.squaredGLMM(reg3d2.lmer)
+
+library(ggplot2)
+reg3d2 = ggplot(df.complete, aes(x = Aridity_index, y = resid.Scales_dorsal)) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "black")
+reg3d2 + theme_classic() + labs(x = "Aridity Index", y = "Dorsal Scale Size (resid.)")
+```
+
+###############################################################################
+#################################################################################
+```{r}
+# Dorsal color
+par(mfrow=c(1,1))
+hist(Sceloporus_specimens_Age10g$Color_Dorsal, breaks = 20)
+```
+
+
+```{r}
+# Summer
+# Mean Temp of Warmest Quarter
+
+par(mfrow=c(1,1))
+par(mar=c(5,5,2,2))
+
+library(lme4)
+library(lmerTest)
+reg1d2.lmer = lmer(Color_Dorsal ~ BIO10_meanTwarmestQ + (1|BIO10_meanTwarmestQ), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1d2.lmer)
+anova(reg1d2.lmer)
+plot(reg1d2.lmer)
+r.squaredGLMM(reg1d2.lmer)
+
+library(ggplot2)
+reg1d2 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO10_meanTwarmestQ, y = Color_Dorsal)) + 
+  geom_point()
+reg1d2 + theme_classic() + labs(x = "Mean Temperature of Warmest Quarter (°C)", y = "Dorsal Lightness")
+```
+
+```{r}
+# Max Temp Warmest Month
+
+library(ggplot2)
+reg1e2 = ggplot(Sceloporus_specimens_Age10g, aes(x = BIO5_maxTwarmestMo, y = Color_Dorsal)) + 
+  geom_point()
+reg1e2 + theme_classic() + labs(x = "Maximum Temperature of Warmest Month (°C)", y = "Dorsal Lightness")
+
+library(lme4)
+library(lmerTest)
+reg1e2.lmer = lmer(Color_Dorsal ~ BIO5_maxTwarmestMo + (1|BIO5_maxTwarmestMo), REML = F, na.action=na.omit, data=Sceloporus_specimens_Age10g)
+summary(reg1e2.lmer)
+anova(reg1e2.lmer)
+plot(reg1e2.lmer)
+r.squaredGLMM(reg1e2.lmer)
+```
+
+# end
